@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- This webpage [Artist Registration] was created by: Antonio Keefe -->
+<!-- Updated:	11/08/2024 -->
+
+<html lang="en">
+<head>
+	<title>Artist Registration | Tattoo Artist Finder</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Forward Fitness Club provides a complimentary one-week trial membership. Contact us today to learn more.">
+	<link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
+</head>
+<body>
+
+	<!-- Skip to Content Link -->
+	<a class="skip" href="#content">Skip to Content</a>
+
+	<div id="container">
+	
+		<!-- Mobile Nav -->
+		<nav class="mobile-nav">
+			<div id="menu-links">
+				<a href="index.html">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="registration.html">Artist Registration</a>
+			</div>
+			<a class="menu-icon" onclick="hamburger()">
+				<div>&#9776;</div>
+			</a>
+		</nav>
+
+		<!-- Use the header area for the website name or logo -->
+		<header id="fya-logo">
+			<a href="index.html"><img src="images/fya-logo.png" alt="Find Your Artist logo"></a>
+		</header>
+		
+		<!-- Tablet, Desktop Nav -->
+		<nav class="tablet-desktop">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="registration.html">Artist Registration</a></li>
+			</ul>
+		</nav>
+		
+		<!-- Use the main area to add the main content of the webpage -->
+		<main id="content">
+		
+			<div id="register">
+			
+				<h2>Are you a tattoo artist looking for a new way to connect with clients?</h2>
+				<h1>Register with us today!</h1>
+				<h3>Simply fill out and submit the form below.</h3>
+				<h4>Be sure to provide any styles you specialize in, along with any categories (fandoms/interests) that you enjoy bringing to life.</h4>
+				<h3>Once your information has been verified, you will be added to our database.</h3>
+				<h4>To request your work be added to our Gallery, registered artists can send high-quality photos to <a href="mailto:akeefe@my.polk.edu?subject=Gallery Submission">artistfinder@tattoo.net</a>.</h4>
+				<p><span class="warn">At this time, only artists located in Florida are available for search. We hope to expand to more states soon.</span></p>
+				<p><span class="warn">Please email us at <a href="mailto:akeefe@my.polk.edu?subject=Out of State Waitlist">artistfinder@tattoo.net</a> if you would like to be added to a waitlist and notified once your state has been added to our database.</span></p>
+				
+			</div>
+			
+			<div id="reg-form">
+			
+				<h3><span class="action">Register now!</span></h3>
+				
+				<form class="reg-form-grid" onsubmit="alert('Thank you for registering! You will be notified once your information has been verified and you have been added to our database.')"><!-- Start Form -->
+				
+					<fieldset>
+						<legend>Artist Information</legend>						
+						<label for="fName">First Name:</label> <input type="text" name="fName" id="fName" size="28" required>						
+						<label for="lName">Last Name:</label> <input type="text" name="lName" id="lName" size="28" required>
+						<label for="city">City (FL Location):</label> <input type="text" name="city" id="city" size="28" required>						
+						<label for="phone">Phone:</label> <input type="tel" name="phone" id="phone" size="28" required>	
+						<label for="email">Email:</label> <input type="email" name="email" id="email" size="28" required>						
+						<label for="site">Website/Portfolio Address:</label> <input type="text" name="site" id="site" size="28" required>						
+						<label for="license">Tattoo License #:</label> <input type="text" name="license" id="license" size="28" required>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Styles</legend>											
+						<label for="traditional"><input type="checkbox" name="style" id="traditional" value="Traditional">Traditional</label>		
+						<label for="neotraditional"><input type="checkbox" name="style" id="neotraditional" value="Neo-Traditional">Neo-Traditional</label>	
+						<label for="newschool"><input type="checkbox" name="style" id="newschool" value="New School">New School</label>														
+						<label for="embroid"><input type="checkbox" name="style" id="embroid" value="Embroidery">Embroidery</label>						
+						<label for="watercol"><input type="checkbox" name="style" id="watercol" value="Watercolors">Watercolors</label>
+						<label for="mural"><input type="checkbox" name="style" id="mural" value="Murals">Murals</label>						
+						<label for="3d"><input type="checkbox" name="style" id="3d" value="3-Dimensional">3-Dimensional</label>												
+						<label for="realism"><input type="checkbox" name="style" id="realism" value="Realism/Portraits">Realism/Portraits</label>						
+						<label for="biomech"><input type="checkbox" name="style" id="biomech" value="Biomechanical">Biomechanical</label>
+						<label for="mandala"><input type="checkbox" name="style" id="mandala" value="Mandala">Mandala</label>		
+						<label for="geo"><input type="checkbox" name="style" id="geo" value="Geomtric">Geometric</label>
+						<label for="minimal"><input type="checkbox" name="style" id="minimal" value="Minimalist">Minimalist</label>	
+						<label for="japanese"><input type="checkbox" name="style" id="japanese" value="Japanese">Japanese</label>						
+						<label for="tribal"><input type="checkbox" name="style" id="tribal" value="Tribal">Tribal</label>
+						<label for="celtic"><input type="checkbox" name="style" id="celtic" value="Celtic">Celtic</label>	
+						<label for="trashpolka"><input type="checkbox" name="style" id="trashpolka" value="Trash Polka">Trash Polka</label>	
+						<label for="dot"><input type="checkbox" name="style" id="dot" value="Dotwork">Dotwork</label>							
+						<label for="black"><input type="checkbox" name="style" id="black" value="Blackwork">Blackwork</label>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Categories</legend>												
+						<label for="disney"><input type="checkbox" name="category" id="disney" value="Disney">Disney</label>	
+						<label for="starwars"><input type="checkbox" name="category" id="starwars" value="Star Wars">Star Wars</label>	
+						<label for="marveldc"><input type="checkbox" name="category" id="marveldc" value="Marvel/DC">Marvel/DC</label>
+						<label for="hpotter"><input type="checkbox" name="category" id="hpotter" value="Harry Potter">Harry Potter</label>
+						<label for="drwho"><input type="checkbox" name="category" id="drwho" value="Doctor Who">Doctor Who</label>						
+						<label for="got"><input type="checkbox" name="category" id="got" value="Game of Thrones">Game of Thrones</label>						
+						<label for="pokemon"><input type="checkbox" name="category" id="pokemon" value="Pokemon">Pokemon</label>						
+						<label for="dragonball"><input type="checkbox" name="category" id="dragonball" value="Dragon Ball">Dragon Ball</label>
+						<label for="animetoon"><input type="checkbox" name="category" id="animetoon" value="Anime/Cartoons">Anime/Cartoons</label>						
+						<label for="videogame"><input type="checkbox" name="category" id="videogame" value="Video Games">Video Games</label>						
+						<label for="scifi"><input type="checkbox" name="category" id="scifi" value="Sci-Fi/Fantasy">Sci-Fi/Fantasy</label>						
+						<label for="horror"><input type="checkbox" name="category" id="horror" value="Horror/Gothic">Horror/Gothic</label>						
+						<label for="mythology"><input type="checkbox" name="category" id="mythology" value="Mythology">Mythology</label>
+						<label for="animalnat"><input type="checkbox" name="category" id="animalnat" value="Animals/Nature">Animals/Nature</label>						
+						<label for="citysky"><input type="checkbox" name="category" id="citysky" value="Cityscape/Skylines">Cityscape/Skylines</label>														
+						<label for="military"><input type="checkbox" name="category" id="military" value="Military">Military</label>						
+						<label for="faith"><input type="checkbox" name="category" id="faith" value="Faith-Based">Faith-Based</label>						
+						<label for="pride"><input type="checkbox" name="category" id="pride" value="Pride">Pride</label>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Requests</legend>
+						
+						<label for="addstyle">Additional Styles:</label>
+						<textarea id="addstyle" name="addstyle" rows="10" cols="35"></textarea>
+						
+						<label for="addcategory">Additional Categories:</label>
+						<textarea id="addcategory" name="addcategory" rows="10" cols="35"></textarea>	
+					</fieldset>
+					
+					<input type="submit" id="submit" value="Submit" class="reg-btn">
+					
+				</form>
+				
+			</div>
+		
+		</main>
+		
+		<!-- Use the footer area to add webpage footer content -->
+		<footer>
+			
+			<div class="copyright">
+				<p>&copy; Copyright 2024. All Rights Reserved.</p>
+				<p>Contact: <a href="mailto:akeefe@my.polk.edu">artistfinder@tattoo.net</a></p>
+				<p>*****************************</p>
+				<h3>Disclaimer: The creation of this website was for a school assignment and is not intended for actual use.
+					The use of any copyrighted material was done so taking Fair Use for Educational Purposes into consideration.</h3>
+			</div>
+						
+		</footer>
+	
+	</div>
+	
+	<script src="scripts/script.js"></script>
+	
+</body>
+</html>
