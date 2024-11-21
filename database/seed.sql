@@ -3,7 +3,7 @@
 /* Author:	Antonio Keefe */
 /* Date:	Nov. 8, 2024 */
 
-USE TAT_FINDER;
+USE tatfinder;
 
 -- Insert rows into the artists table 
 
