@@ -3,10 +3,10 @@
 /* Author:	Antonio Keefe */
 /* Date:	Nov. 8, 2024 */
 
-DROP DATABASE IF EXISTS TAT_FINDER;
+DROP DATABASE IF EXISTS tatfinder;
 
-CREATE DATABASE TAT_FINDER;
-USE TAT_FINDER;
+CREATE DATABASE tatfinder;
+USE tatfinder;
 
 -- Create table for Artists
 
