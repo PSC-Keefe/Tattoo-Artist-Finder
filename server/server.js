@@ -1,4 +1,4 @@
-// Author: Antonio Keefe	Updated: 11/08/2024
+// Author: Antonio Keefe	Updated: 11/21/2024
 // Backend Logic: Node.js with Express to create an endpoint to handle the search logic.
 
 // Connect to MySQL database and set up web server to listen for search requests at the /search endpoint.
@@ -6,24 +6,31 @@
 
 const express = require('express');
 const mysql = require('mysql2');
-const path = require('path'); // Require the path module
+const cors = require('cors');
+const path = require('path');
 const app = express();
 const port = 3000;
 
+// Enable CORS 
+app.use(cors());
+
 // Middleware to serve static files
-app.use(express.static(path.join(__dirname, '../client/public')));
+app.use(express.static(path.join(__dirname, '../')));
 
 // Database connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'akeefe312',
-    database: 'tat_finder'
+    host: 'taf-db-instance.cd0e62a8wt4q.us-east-1.rds.amazonaws.com',
+    user: 'tkeefe',
+    password: 'AKeefe312',
+    database: 'tatfinder'
 });
 
 // Connect to database
 db.connect(err => {
-    if (err) throw err;
+    if (err) {
+        console.error('Error connecting to the database:', err);
+        return;
+    }
     console.log('Connected to database');
 });
 
@@ -68,4 +75,3 @@ app.get('/search', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
-
