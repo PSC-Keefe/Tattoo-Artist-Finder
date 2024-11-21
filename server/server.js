@@ -29,7 +29,7 @@ db.connect(err => {
 
 // Route to serve index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/public/index.html'));
+    res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 // Handle search request (search endpoint)
