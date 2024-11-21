@@ -1,0 +1,539 @@
+/*
+	Author: Antonio Keefe
+	Date: 11/08/2024
+	File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, table, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color: #000;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rule for box sizing applies to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Style rules for skip navigation link */
+.skip {
+    position: absolute;
+    left: -999px;
+}
+
+.skip:focus {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 0.5%;
+    top: auto;
+    left: auto;
+    right: 1px;
+    z-index: 1;
+}
+
+/* Begin style rules for mobile viewport */
+
+/* Style rules for header */
+header {
+    top: 0;
+    background-color: #000;
+    height: 155px;
+}
+
+header img {
+    margin: 0 auto;
+}
+
+/* Style rules for hamburger menu */
+.mobile-nav a {
+    color: #fff;
+    font-family: 'Francois One', sans-serif;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+
+.mobile-nav a.menu-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Show mobile class, hide tablet-desktop class and menu-links id */
+.mobile {
+    display: block;
+}
+
+.tablet-desktop, #menu-links {
+    display: none;
+}
+
+/* Style rules for main content */
+main {
+    background: #fff;
+    padding: 2%;
+    font-size: 1.15em;
+    font-family: 'Roboto Slab', serif;
+}
+
+.mobile h3 {
+    text-shadow: 5px 5px 8px #ccc;
+}
+
+.warn {
+    font-size: .8em;
+    color: red;
+}
+
+.action {
+    font-size: 1.35em;
+    color: #d4af37;
+    font-weight: bold;
+    text-shadow: 5px 5px 8px #ccc;
+}
+
+.slant {
+    font-style: italic;
+}
+
+.frame {
+    position: relative;
+    max-width: 450px;
+    margin: 2% auto;
+}
+
+.pic-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: 'Francois One', sans-serif;
+    font-size: 1.0em;
+}
+
+.external-link {
+    color: #666600;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#home {
+    text-align: center;
+}
+
+#register {
+    text-align: center;
+}
+
+.map {
+    border: 2px solid #000;
+    width: 95%;
+    height: 50%;
+}
+
+#search-form {
+    margin-top: 2%;
+    padding: 1%;
+}
+
+#search-form h3 {
+    text-align: center;
+}
+
+#reg-form {
+    margin-top: 2%;
+    background-color: #f2f2f2;
+    padding: 1%;
+}
+
+#reg-form h3 {
+    text-align: center;
+}
+
+/* Style rules for form elements */
+fieldset, input, select, textarea {
+    margin-bottom: 1%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 1%;
+}
+
+form #search {
+    margin: 0 auto;
+    display: block;
+}
+
+form #search:hover {
+    background-color: black;
+    color: gold;
+}
+
+form #submit {
+    margin: 0 auto;
+    border: none;
+    display: block;
+    padding: 1%;
+    background-color: #b3b3b3;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+form #submit:hover {
+    background-color: black;
+    color: gold;
+}
+
+/* Style rules for footer content */
+footer .copyright {
+    margin: 0 auto;
+    font-size: 0.75em;
+    text-align: center;
+    color: #fff;
+    padding: 2% 2%;
+    width: 75%;
+}
+
+footer p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive Table Styles */
+@media (max-width: 630px) {
+    table thead {
+        display: none;
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        white-space: normal;
+        font-size: 3vw;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 5px;
+        font-weight: bold;
+        text-align: left;
+        font-size: 3vw;
+    }
+
+    table td:last-child {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px), print {
+
+/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+.tablet-desktop {
+    display: block;
+}
+
+.mobile, .mobile-nav {
+    display: none;
+}
+
+/* Tablet Viewport: Style rule for header */
+header {
+    padding-bottom: 2%;
+}
+
+/* Tablet Viewport: Style rules for nav area */
+nav {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    font-size: 1.5em;
+    font-family: 'Francois One', sans-serif;
+    display: inline-block;
+    border-right: 1px solid #fff;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav li a {
+    padding: 0.1em 0.75em;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Tablet Viewport: Style rules for main content area */
+main ul {
+    margin: 0 0 4% 10%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+
+.pic-text {
+    font-size: 1em;
+    padding: 10px;
+}
+
+.hero-text {
+    font-size: 1.75em;
+}
+
+.grid-item4 {
+    grid-column: 1 / span 3;
+}
+
+.map {
+    width: 600px;
+    height: 450px;
+}
+
+/* Tablet Viewport: Style rules for table */
+table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+}
+
+th, td {
+	font-size: 1.5vw;
+	border: 1px solid #000;
+    padding: 0.5rem;
+    text-align: center;
+    word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+th {
+    background-color: #000;
+    color: #fff;
+    font-size: 2vw;
+}
+
+tr:nth-child(odd) {
+    background-color: #ccc;
+}
+
+/* Tablet Viewport: Style rule for form element */
+form {
+    width: auto;
+}
+
+#search-form label {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#search-form select {
+    margin-right: 25px;
+}
+
+form #search {
+    display: inline-block;
+}
+
+form #submit {
+    display: inline-block;
+}
+
+.search-form-grid {
+    display: center;
+}
+
+.reg-form-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+.reg-btn {
+    grid-column: 1 / span 2;
+}
+
+/* Tablet Viewport: Animation */
+@-webkit-keyframes text-animation {
+    0% { font-size: 1em; }
+    50% { font-size: 2em; }
+    100% { font-size: 1.35em; }
+}
+
+@keyframes text-animation {
+    0% { font-size: 1em; }
+    50% { font-size: 2em; }
+    100% { font-size: 1.35em; }
+}
+
+figcaption {
+    -webkit-animation-name: text-animation;
+    animation-name: text-animation;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1015px), print {
+    
+    /* Desktop Viewport: Style rule for header */
+    header {
+        width: 25%;
+        float: left;
+        padding-bottom: 0;
+    }
+    
+    /* Desktop Viewport: Style rules for nav area */
+    nav {
+        float: right;
+        width: 70%;
+        margin: 2em 1em 0 0;
+    }
+    
+    nav ul {
+        text-align: right;
+    }
+    
+    nav li {
+        border: none;
+    }
+    
+    nav li a {
+        padding: 0.5em 1em;
+    }
+    
+    nav li a:hover {
+        color: #000;
+        background-color: #fff;
+        transform: scale(1.1);
+    }
+    
+    /* Desktop Viewport: Style rules for main content */
+    main {
+        clear: left;
+    }
+    
+    main h1 {
+        font-size: 1.8em;
+    }
+    
+    article h3 {
+        font-size: 1.75em;
+    }
+    
+    .pic-text {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+    
+    .hero-text {
+        font-size: 2.25em;
+    }
+        
+    /* Desktop Viewport: Style rules for form elements */
+    form {
+        width: auto;
+    }
+        
+    .reg-form-grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px;
+    }
+    
+    .reg-btn {
+        grid-column: 1 / span 4;
+    }
+    
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px) {
+    
+    #container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+    
+    table {
+        width: 80%;
+    }
+    
+}
+
+/* Media Query for Print */
+@media print {
+    
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+    
+}
