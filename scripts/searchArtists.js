@@ -1,4 +1,4 @@
-// Author: Antonio Keefe	Updated: 11/08/2024
+// Author: Antonio Keefe	Updated: 11/21/2024
 // JavaScript & AJAX: JavaScript to handle form submission and display results
 // Retrieve the selected style/category from the form.
 // Send request request to server to fetch artists matching criteria.
@@ -10,7 +10,7 @@ async function searchArtists() {
     const category = document.getElementById('category').value;
 
     try {
-        const response = await fetch(`/search?style=${style}&category=${category}`);
+        const response = await fetch(`http://35.172.135.157:3000/search?style=${style}&category=${category}`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -51,5 +51,3 @@ async function searchArtists() {
         document.getElementById('results').innerHTML = '<p>Error loading results. Please try again later.</p>';
     }
 }
-
-
